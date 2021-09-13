@@ -1,0 +1,58 @@
+<html><head><style>.blink {
+        animation: blinker 0.6s linear infinite;
+        color: red;
+        font-size: 100px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+	  </style>
+	  </head>
+
+<body onload="startTime()" style="
+    background-color: #292727;
+">
+<h1 style="color: lime;text-align: center;">CYBER CRIME VIJAYAWADA</h1><h1>
+</h1><h2 style="
+    color: #00ff2b;
+">CAM 06</h2>
+<div>
+<span>
+<p class="blink" style="
+    margin-bottom: 0px;
+    margin-top: 0px;
+">.</p>
+<h2 style="color: #00ff2b;">Recording</h2><h2>
+
+</h2></span></div>
+
+<div id="txt" style="
+    color: #00ff2b;
+    font-size: 40px;
+">19:08:28</div>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+
+
+</body></html>
